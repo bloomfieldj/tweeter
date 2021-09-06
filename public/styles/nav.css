@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  z-index: 1;
+}
+
+.leftNavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rightNavBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+

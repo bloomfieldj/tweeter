@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  z-index: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #a8edea;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+
+}
