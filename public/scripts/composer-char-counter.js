@@ -5,10 +5,11 @@ $(document).ready(function() {
     const typedChars = $(this).val().length;
     const remainingChars = maxChars - typedChars;
     const currentCount = $(this).siblings('div').find('.counter').html(remainingChars);
+    const htmlCounter = document.getElementById("counter")
     if(remainingChars <= 0 ){
-      currentCount.addClass('color-red')
+      htmlCounter.style.color = "red";
     } else{
-      currentCount.removeClass('color-red')
+      htmlCounter.style.color = "black";
     }
   })
 
