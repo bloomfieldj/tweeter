@@ -7,8 +7,6 @@ main {
   justify-content: flex-start;
   align-items: center;
   align-self: center;
-  background-color: #a8edea;
-  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
   flex-shrink: 0;
 
 }
