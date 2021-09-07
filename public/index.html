@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/regular.min.css" integrity="sha512-d2x1oQUT6HACW9UlXxWI6XrIBDrEE5z2tit/+kWEdXdVYuift7sm+Q6ucfGWQr1F0+GD9/6eYoYDegw2nm05Vw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -24,6 +27,7 @@
     <!-- External JS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="scripts/tweet-reactions.js"></script>
 
 
     <!-- App JS -->
@@ -62,24 +66,24 @@
           </div>
         </form>
       </section>
-      <section >
+      <section id = 'tweet'>
         <article class = "tweetDisplay">
           <header class = tweetHeader>
           <div class = profileInfo>
-            <p> profile pic</p>
-            <p>profile name</p>
+            <img  class = profilePic src="https://lh3.googleusercontent.com/proxy/LElih7EjFOQJTod_RFj3P2gjov4id6K1-bdSOv-N1pveIXpvz6_6elga6G7bW83ZqB7ZGNvuvPRbQaCq8-9YRObu672MhFM"> 
+            <p class = userName >The Batman</p>
           </div>
-          <h3> handle</h3>
+          <h3 class = "tweeterHandle">@therealbatman</h3>
           </header>
           <p class = tweetBody>
             Tweet Body
           </p>
           <footer class = tweetFooter>
-              <p>date tweeted</p>
+              <p> 10 years ago</p>
               <div class = icons>
-                <p> 1 </p>
-                <p> 2 </p>
-                <p> 3 </p>
+                <i class="fas fa-flag"></i>
+                <i class="fas fa-retweet"></i>
+                <i class="fas fa-heart"></i>
               </div>
           </footer>
         </article>
