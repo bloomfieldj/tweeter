@@ -18,7 +18,7 @@ const createTweetElement = function(tweet){
         <h3 class = "tweeterHandle">${tweet.user.handle}</h3>
       </header>
       <p class = 'tweetBody'>
-      ${tweet.content.text}
+      ${escape(tweet.content.text)}
       </p>
       <footer class = tweetFooter>
         <p> ${timeago.format(tweet.created_at)}</p>
@@ -55,6 +55,13 @@ const loadTweets = function() {
     renderTweets(data);
   })
 }
+
+//Escapes potentially insecure text
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 $(document).ready(function() {   
   loadTweets();
