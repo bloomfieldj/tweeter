@@ -4,31 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 //Fills tweet template with user-entered data
 const createTweetElement = function(tweet){
   console.log(tweet);
@@ -71,14 +46,25 @@ const renderTweets = function(tweets){
   
 }
 
+//Fetches tweets from database
+const loadTweets = function() {
+  $.getJSON('/tweets/')
+  .then(data => { 
+    console.log('success');
+    ;
+    renderTweets(data);
+  })
+}
 
 $(document).ready(function() {   
-  renderTweets(data);
+  loadTweets();
 
   $('#tweet-button').on('submit', (event) => {
     event.preventDefault();
     const tweetContent = $('#tweet-button').serialize();
-    jQuery.post('/tweets/', tweetContent);
-    // renderTweets(data);
+    $.post('/tweets/', tweetContent)
   })
+
 })
+
+
