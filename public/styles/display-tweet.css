@@ -3,7 +3,6 @@ section {
 }
 
 .tweetDisplay {
-  margin-top: 1em;
   border: 5px solid black;
   display: flex;
   width: 100%;
@@ -62,4 +61,18 @@ section {
 
 .tweeterHandle {
   color: lightslategray;
+}
+
+#tweet:hover {
+  box-shadow: 5px 10px;
+}
+
+.fas.fa-flag:hover {
+  color: darkseagreen;
+}
+.fas.fa-retweet:hover {
+  color: darkseagreen;
+}
+.fas.fa-heart:hover {
+  color: darkseagreen;
 }
