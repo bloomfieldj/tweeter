@@ -2,8 +2,9 @@ section {
   width: 100%;
 }
 
-.tweetDisplay {
-  border: 5px solid black;
+.tweet {
+  margin-bottom: 1em;
+  border: 3px solid black;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -63,7 +64,7 @@ section {
   color: lightslategray;
 }
 
-#tweet:hover {
+.tweet:hover {
   box-shadow: 5px 10px;
 }
 
