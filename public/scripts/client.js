@@ -46,7 +46,7 @@ const createTweetElement = function(tweet){
       ${tweet.content.text}
       </p>
       <footer class = tweetFooter>
-        <p> ${tweet.created_at}</p>
+        <p> ${timeago.format(tweet.created_at)}</p>
         <div class = 'icons'>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -74,4 +74,11 @@ const renderTweets = function(tweets){
 
 $(document).ready(function() {   
   renderTweets(data);
+
+  $('#tweet-button').on('submit', (event) => {
+    event.preventDefault();
+    const tweetContent = $('#tweet-button').serialize();
+    jQuery.post('/tweets/', tweetContent);
+    // renderTweets(data);
+  })
 })
