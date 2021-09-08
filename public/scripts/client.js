@@ -52,7 +52,7 @@ const loadTweets = function() {
   .then(data => { 
     console.log('success');
     ;
-    renderTweets(data);
+    renderTweets(data.reverse());
   })
 }
 
@@ -74,13 +74,14 @@ $(document).ready(function() {
     const counter = Number($('#counter').html());
 
     if(counter <= 0){
-      alert("Too verbose!");
+      $('#error-verbosity').slideDown(1000);
     } else if (counter === 140){
-      alert("Get to typing!");
+      $('#error-empty').slideDown(1000);
     } else {
       if(!allSpacesCheck){
-        alert("Please type something... ANYTHING...");
+        $('#error-spaces').slideDown(1000);
       } else {
+        $('.new-tweet-error').slideUp(100);
         $.post('/tweets/', tweetContent);
         $('#tweets-container').empty();
         loadTweets();

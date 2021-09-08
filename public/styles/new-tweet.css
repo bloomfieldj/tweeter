@@ -45,3 +45,13 @@
 .fas.fa-angle-double-down:hover {
   color: red;
 }
+
+.new-tweet-error { 
+  width: 100%;
+  border: 5px solid red;
+ text-align: center;
+  display: none;
+  color:red;
+  background-color: rebeccapurple;
+  font-size: 2em;
+}

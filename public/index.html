@@ -58,6 +58,9 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <p id = 'error-empty' class ="new-tweet-error"> Error: Get to typing... </p>
+      <p id = 'error-spaces' class ="new-tweet-error"> Error: Please actually write something... </p>
+      <p id = 'error-verbosity' class ="new-tweet-error"> Error: Too verbose... </p>
       <section class="new-tweet">
         <form id = "tweet-button" class = "form" action="/tweets/" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
