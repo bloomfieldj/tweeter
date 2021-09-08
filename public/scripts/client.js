@@ -62,7 +62,10 @@ $(document).ready(function() {
   $('#tweet-button').on('submit', (event) => {
     event.preventDefault();
     const tweetContent = $('#tweet-button').serialize();
-    $.post('/tweets/', tweetContent)
+    $.post('/tweets/', tweetContent);
+    $('#tweets-container').empty();
+    loadTweets();
+
   })
 
 })
