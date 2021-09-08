@@ -62,9 +62,23 @@ $(document).ready(function() {
   $('#tweet-button').on('submit', (event) => {
     event.preventDefault();
     const tweetContent = $('#tweet-button').serialize();
-    $.post('/tweets/', tweetContent);
-    $('#tweets-container').empty();
-    loadTweets();
+    const allSpacesCheck = tweetContent.substring(5).replaceAll('%20', '');
+
+    const counter = Number($('#counter').html());
+
+    if(counter <= 0){
+      alert("Too verbose!");
+    } else if (counter === 140){
+      alert("Get to typing!");
+    } else {
+      if(!allSpacesCheck){
+        alert("Please type something... ANYTHING...");
+      } else {
+        $.post('/tweets/', tweetContent);
+        $('#tweets-container').empty();
+        loadTweets();
+      }
+    }
 
   })
 
