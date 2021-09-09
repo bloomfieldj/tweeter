@@ -4,10 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//Fills tweet template with user-entered data
+//Fills HTML tweet template with user-entered data
 const createTweetElement = function(tweet){
-  console.log(tweet);
-  const formattedTweet =  
+  const tweetElement =  
   `
     <article class = "tweet">
       <header class = tweetHeader>
@@ -31,7 +30,7 @@ const createTweetElement = function(tweet){
   </article>
   `
   
-  return formattedTweet
+  return tweetElement;
   
 }
 
@@ -41,12 +40,12 @@ const createTweetElement = function(tweet){
 const renderTweets = function(tweets){
   for (tweet of tweets){
     const newTweet = createTweetElement(tweet);
-    $('#tweets-container').append(newTweet)
+    $('#tweets-container').append(newTweet);
   }
   
 }
 
-//Fetches tweets from database
+//Fetches tweets from database and renders them
 const loadTweets = function() {
   $.getJSON('/tweets/')
   .then(data => { 
@@ -56,16 +55,19 @@ const loadTweets = function() {
   })
 }
 
-//Escapes potentially insecure text
+//Escapes potentially insecure text upon new tweet submission
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+//Ensures page is loaded before fetching and loading tweets
 $(document).ready(function() {   
+  
   loadTweets();
 
+  //Checks for and displays any errors upon submission of tweets  
   $('#tweet-button').on('submit', (event) => {
     event.preventDefault();
     const tweetContent = $('#tweet-button').serialize();
