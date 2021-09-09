@@ -1,15 +1,22 @@
 .header {
-  border: 5px red solid;
-  margin: 2em;
-  padding: 2em;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0;
   display: flex;
   height: 18em;
-  width: 18em;
   z-index: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: rgba(87, 102, 238, 0.781);
 
+
 }
 
+@media only screen and (min-width: 768px) {
+  .header{
+    width: 18em;
+    margin: 2em;
+    padding: 2em;
+  }
+}

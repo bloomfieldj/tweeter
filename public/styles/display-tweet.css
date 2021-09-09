@@ -1,5 +1,7 @@
 section {
   width: 100%;
+  margin-left: 2em;
+
 }
 
 .tweet {
@@ -27,6 +29,8 @@ section {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 .tweetFooter {
@@ -37,6 +41,8 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 .icons {
@@ -53,15 +59,18 @@ section {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 1em;
 }
 
 .profilePic {
   width: 3em;
   height: 3em;
+  margin-right: 0.5em;
 }
 
 .tweeterHandle {
   color: lightslategray;
+  margin-right: 1em;
 }
 
 .tweet:hover {

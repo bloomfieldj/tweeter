@@ -11,21 +11,27 @@ body {
   flex-direction: row;
   flex-flow: wrap;
   justify-content: flex-start;
-  border: 5px blue solid;  
-  margin-top: 120px;
+  margin-top: 5em;
   color: #545149;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #a8edea;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
 }
 
-
-nav span {
-  font-family: 'Bungee', cursive;
-  font-size: 1.5em;
+@media only screen and (min-width: 768px) {
+  .nav{
+    background-color: rgba(87, 102, 238, 0.781);
+  }
+  .header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.container {
-  width: 50%;
+@media only screen and (min-width: 1335px) {
+  .container {
+    width: 60%;
+  }
 }
