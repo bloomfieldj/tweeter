@@ -4,6 +4,7 @@ $(document).ready(function() {
     const maxChars = 140;
     const typedChars = $(this).val().length;
     const remainingChars = maxChars - typedChars;
+    const currentCount = $(this).siblings('div').find('.counter').html(remainingChars);
     const htmlCounter = document.getElementById("counter")
     if(remainingChars <= 0 ){
       htmlCounter.style.color = "red";
